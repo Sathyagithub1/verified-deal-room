@@ -25,7 +25,7 @@ Verified by Concordium badge · Agent Registry · ERC-8004 Agent Card · x402 wi
 Mid-market buyers and suppliers in B2B wholesale. They are Sourcio's target users, and their procurement and compliance teams need accountability before letting agents transact. Path to mainnet: Sourcio's marketplace onboards verified suppliers first, then turns on agent-to-agent settlement for repeat orders under a set value limit.
 
 ## Team
-- **Sathyamoorthy Venkatesan**, Founder, Ayon AI (Toronto, Canada). Lead: product and engineering. Sathya@ayonai.com
+- **Sathyamoorthy Venkatesan**, Co-founder, Ayon AI Inc. (Toronto, Canada). Lead: product and engineering. Sathya@ayonai.com
 - **Ragavendran Baskar**, Co-founder, Ayon AI Inc. (Canada)
 - **Lenin Prakash Pandiyan**, Co-founder, Ayon AI Inc. (Canada)
 
