@@ -26,9 +26,10 @@ Mid-market buyers and suppliers in B2B wholesale. They are Sourcio's target user
 
 ## Team
 - **Sathyamoorthy Venkatesan**, Founder, Ayon AI (Toronto, Canada). Lead: product and engineering. Sathya@ayonai.com
-- _[Add other team members' names and roles here, or delete this line if submitting solo]_
+- **Ragavendran Baskar**, Co-founder, Ayon AI Inc. (Canada)
+- **Lenin Prakash Pandiyan**, Co-founder, Ayon AI Inc. (Canada)
 
-**Ayon AI** is a Canadian AI software studio. Its products include Cyla AI (agency operating system), AUBO (revenue attribution) and Sourcio (agentic B2B commerce).
+**Ayon AI Inc.** is a Canadian AI software studio. Its products include Cyla AI (agency operating system), AUBO (revenue attribution) and Sourcio (agentic B2B commerce).
 
 ## Links
 - Existing agent (NEAR testnet version): https://github.com/Sathyagithub1/sourcio-near
