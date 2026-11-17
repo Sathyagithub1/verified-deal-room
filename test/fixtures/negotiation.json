@@ -1,0 +1,6 @@
+[
+  { "role": "seller", "action": "offer", "unit_price": "0.12", "quantity": 100, "lead_time_days": 14, "message": "List price 0.12 CCD per unit, 14 days." },
+  { "role": "buyer", "action": "offer", "unit_price": "0.07", "quantity": 100, "lead_time_days": 10, "message": "We can do 0.07 if you ship in 10 days." },
+  { "role": "seller", "action": "offer", "unit_price": "0.09", "quantity": 100, "lead_time_days": 12, "message": "0.09 at 12 days is our best." },
+  { "role": "buyer", "action": "accept", "unit_price": "0.09", "quantity": 100, "lead_time_days": 12, "message": "Agreed." }
+]
