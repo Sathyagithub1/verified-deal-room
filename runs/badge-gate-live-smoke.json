@@ -1,0 +1,16 @@
+[
+  {
+    "badge": "JyP9UhTu6PeHXpm6LAhSy",
+    "via": "mcp",
+    "allowed": true,
+    "reason": "verified: active agent, card hash matches on-chain, badge well-formed",
+    "at": "2026-11-19T05:57:16.780Z"
+  },
+  {
+    "badge": "JyP9TtQC3HCNrTYR3sc2T",
+    "via": "mcp",
+    "allowed": false,
+    "reason": "failed checks: card_fetched, hash_matches_on_chain, badge_present, badge_well_formed",
+    "at": "2026-11-19T05:57:17.408Z"
+  }
+]
