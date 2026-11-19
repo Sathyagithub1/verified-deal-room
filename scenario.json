@@ -1,0 +1,8 @@
+{
+  "product": "Recycled kraft shipping boxes, 30x20x15 cm",
+  "quantity": 100,
+  "currency": "CCD",
+  "capCcd": "10",
+  "buyer": { "targetUnitPrice": "0.07", "maxLeadTimeDays": 14 },
+  "seller": { "listUnitPrice": "0.12", "floorUnitPrice": "0.08", "leadTimeDays": 14 }
+}
