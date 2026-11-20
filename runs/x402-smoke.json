@@ -1,0 +1,28 @@
+{
+  "terms": {
+    "product": "smoke-test widget",
+    "unit_price": "0.25",
+    "quantity": 2,
+    "currency": "CCD"
+  },
+  "termsHash": "11baef3f6922169f631ff15c59936e19dde393ac3c54ca27dacf6be089a93728",
+  "amountMicro": "500000",
+  "txHash": "9eaa3d68e267f2a40f79ae87ce1a78fed30cf85574f85274a3a412d8012f6d89",
+  "explorerUrl": "https://ccdexplorer.io/testnet/transaction/9eaa3d68e267f2a40f79ae87ce1a78fed30cf85574f85274a3a412d8012f6d89",
+  "before": {
+    "buyer": "19996352785",
+    "seller": "20000000000",
+    "facilitator": "20000000000"
+  },
+  "after": {
+    "buyer": "19995852785",
+    "seller": "20000500000",
+    "facilitator": "19995321249"
+  },
+  "delta": {
+    "buyer": "-500000",
+    "seller": "500000",
+    "facilitator": "-4678751"
+  },
+  "at": "2026-11-20T07:26:55.543Z"
+}
