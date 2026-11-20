@@ -1,0 +1,12 @@
+{
+  "label": "deal-room smoke 2026-11-20T07:22:02.417Z",
+  "head": "13aa633d07e334bdbdd82100ed6198d9b9f58818dc8b988010fd1cec03648211",
+  "sender": "4Bbiw5dh6rKkPrTujo98E52kXxf1XEU2JupFfrsnnZ4xrgHYu4",
+  "txHash": "4dd9f39b910e69d6c4d7703f3bceb7560ff98fd4392866cfa4289b519c896c74",
+  "explorerUrl": "https://ccdexplorer.io/testnet/transaction/4dd9f39b910e69d6c4d7703f3bceb7560ff98fd4392866cfa4289b519c896c74",
+  "readBack": {
+    "ok": true,
+    "onChain": "13aa633d07e334bdbdd82100ed6198d9b9f58818dc8b988010fd1cec03648211"
+  },
+  "at": "2026-11-20T07:22:11.026Z"
+}
