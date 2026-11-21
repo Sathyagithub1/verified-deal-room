@@ -1,0 +1,158 @@
+{
+  "format": "ayon.euaia-record/v1",
+  "generatedAt": "2026-11-21T08:33:31.396Z",
+  "note": "Record-keeping evidence for an AI agent transaction. Not legal advice or a compliance determination.",
+  "system": {
+    "name": "Verified Deal Room",
+    "provider": "Ayon AI Inc.",
+    "network": "testnet",
+    "agents": [
+      {
+        "role": "buyer",
+        "badge": "JyP9VYjovVVVqtRQyBhPf",
+        "registryTokenId": "1368",
+        "ownerAccount": "4Bbiw5dh6rKkPrTujo98E52kXxf1XEU2JupFfrsnnZ4xrgHYu4",
+        "agentCard": "https://raw.githubusercontent.com/Sathyagithub1/verified-deal-room/main/cards/buyer.json",
+        "cardSha256": "5aef7f909592a47c7c6c6ead837955cc0343d380200d8082d0b2bbf8f99e7ca9"
+      },
+      {
+        "role": "seller",
+        "badge": "JyP9VZqHrWzRg1f9swboB",
+        "registryTokenId": "1369",
+        "ownerAccount": "4PrHYANQoqNYtMAgnh8Jev6vhqaJ7Rjnmfe2SaTB91acFEKChZ",
+        "agentCard": "https://raw.githubusercontent.com/Sathyagithub1/verified-deal-room/main/cards/seller.json",
+        "cardSha256": "1c0e6a233ece65e1883990877433bb54beb72de81390652152c3c1de7b3fa807"
+      }
+    ]
+  },
+  "humanOversight": {
+    "budgetCapMicro": "10000000",
+    "maxModelCalls": 8,
+    "counterpartyRule": "deal only with agents whose Concordium badge verifies (active, card hash matches on-chain)"
+  },
+  "events": [
+    {
+      "seq": 0,
+      "timestamp": "2026-11-21T08:29:10.066Z",
+      "actor": "buyer",
+      "type": "badge_check",
+      "data": {
+        "counterparty": "JyP9VZqHrWzRg1f9swboB",
+        "allowed": true,
+        "reason": "verified: active agent, card hash matches on-chain, badge well-formed"
+      },
+      "prevHash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "hash": "96aa36d87b85dd25cebcad2b8889cd4e918862508eb8f22f5d482d097c4524b5"
+    },
+    {
+      "seq": 1,
+      "timestamp": "2026-11-21T08:29:10.629Z",
+      "actor": "seller",
+      "type": "badge_check",
+      "data": {
+        "counterparty": "JyP9VYjovVVVqtRQyBhPf",
+        "allowed": true,
+        "reason": "verified: active agent, card hash matches on-chain, badge well-formed"
+      },
+      "prevHash": "96aa36d87b85dd25cebcad2b8889cd4e918862508eb8f22f5d482d097c4524b5",
+      "hash": "e475ad73a468bb88656f58b605ac5264fbb185bc066c0df4d8b8b1841c532dae"
+    },
+    {
+      "seq": 2,
+      "timestamp": "2026-11-21T08:29:10.634Z",
+      "actor": "seller",
+      "type": "offer",
+      "data": {
+        "role": "seller",
+        "action": "offer",
+        "unit_price": "0.12",
+        "quantity": 100,
+        "lead_time_days": 14,
+        "message": "List price 0.12 CCD per unit, 14 days."
+      },
+      "prevHash": "e475ad73a468bb88656f58b605ac5264fbb185bc066c0df4d8b8b1841c532dae",
+      "hash": "9cfbfd22f553d71a3d5a7a894e386eebecc9a6b44913fcc6a8270231a5341279"
+    },
+    {
+      "seq": 3,
+      "timestamp": "2026-11-21T08:29:10.634Z",
+      "actor": "buyer",
+      "type": "offer",
+      "data": {
+        "role": "buyer",
+        "action": "offer",
+        "unit_price": "0.07",
+        "quantity": 100,
+        "lead_time_days": 10,
+        "message": "We can do 0.07 if you ship in 10 days."
+      },
+      "prevHash": "9cfbfd22f553d71a3d5a7a894e386eebecc9a6b44913fcc6a8270231a5341279",
+      "hash": "0793c66d70da429551dead189247d47c928838a48a289afaf0ac2655a6413014"
+    },
+    {
+      "seq": 4,
+      "timestamp": "2026-11-21T08:29:10.634Z",
+      "actor": "seller",
+      "type": "offer",
+      "data": {
+        "role": "seller",
+        "action": "offer",
+        "unit_price": "0.09",
+        "quantity": 100,
+        "lead_time_days": 12,
+        "message": "0.09 at 12 days is our best."
+      },
+      "prevHash": "0793c66d70da429551dead189247d47c928838a48a289afaf0ac2655a6413014",
+      "hash": "998add53c42b1d4272ef1b8ef2b822ec3c5264406ea32fa0bbf507a235acb68b"
+    },
+    {
+      "seq": 5,
+      "timestamp": "2026-11-21T08:29:10.635Z",
+      "actor": "buyer",
+      "type": "accept",
+      "data": {
+        "role": "buyer",
+        "action": "accept",
+        "unit_price": "0.09",
+        "quantity": 100,
+        "lead_time_days": 12,
+        "message": "Agreed."
+      },
+      "prevHash": "998add53c42b1d4272ef1b8ef2b822ec3c5264406ea32fa0bbf507a235acb68b",
+      "hash": "03418389453fac9c6df1765f8725fa5cdc0c24540aadfd0754aed74780d8357b"
+    },
+    {
+      "seq": 6,
+      "timestamp": "2026-11-21T08:29:17.575Z",
+      "actor": "buyer",
+      "type": "payment",
+      "data": {
+        "amountMicro": "9000000",
+        "tx": "173de7e38e51e636ad728243e48c2fd57d31f1ed4e33160aeeeb7773d161aa52"
+      },
+      "prevHash": "03418389453fac9c6df1765f8725fa5cdc0c24540aadfd0754aed74780d8357b",
+      "hash": "a82fb4861b56c7774d26a1068db7487d2c3af7c5df28518a9ada50bc94269ba6"
+    },
+    {
+      "seq": 7,
+      "timestamp": "2026-11-21T08:29:23.306Z",
+      "actor": "system",
+      "type": "anchor",
+      "data": {
+        "tx": "73d24cbd73db2bbcbcd7ccfc003c95a5511b4fcd055ea08848d387fd3c5c7ae7",
+        "anchoredHead": "a82fb4861b56c7774d26a1068db7487d2c3af7c5df28518a9ada50bc94269ba6"
+      },
+      "prevHash": "a82fb4861b56c7774d26a1068db7487d2c3af7c5df28518a9ada50bc94269ba6",
+      "hash": "438942e0567dfaedd747eaeb2c7038a510dadd0b4520fe6cbb2fe07b1041067a"
+    }
+  ],
+  "integrity": {
+    "head": "438942e0567dfaedd747eaeb2c7038a510dadd0b4520fe6cbb2fe07b1041067a",
+    "chainVerified": true,
+    "anchor": {
+      "network": "testnet",
+      "tx": "73d24cbd73db2bbcbcd7ccfc003c95a5511b4fcd055ea08848d387fd3c5c7ae7",
+      "explorerUrl": "https://ccdexplorer.io/testnet/transaction/73d24cbd73db2bbcbcd7ccfc003c95a5511b4fcd055ea08848d387fd3c5c7ae7"
+    }
+  }
+}
