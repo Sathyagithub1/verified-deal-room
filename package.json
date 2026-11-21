@@ -11,7 +11,10 @@
     "test": "node --test test/*.test.mjs",
     "register": "node src/cli/register.mjs",
     "demo": "node src/cli/demo.mjs",
-    "replay": "node src/cli/demo.mjs --replay"
+    "replay": "node src/cli/demo.mjs --replay",
+    "export": "node src/cli/export-euaia.mjs",
+    "anchor-smoke": "node src/cli/anchor-smoke.mjs",
+    "x402-smoke": "node src/cli/x402-smoke.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.9.0",

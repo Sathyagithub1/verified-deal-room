@@ -1,0 +1,206 @@
+{
+  "format": "ayon.euaia-record/v1",
+  "generatedAt": "2026-11-21T08:32:04.395Z",
+  "note": "Record-keeping evidence for an AI agent transaction. Not legal advice or a compliance determination.",
+  "system": {
+    "name": "Verified Deal Room",
+    "provider": "Ayon AI Inc.",
+    "network": "testnet",
+    "agents": [
+      {
+        "role": "buyer",
+        "badge": "JyP9VYjovVVVqtRQyBhPf",
+        "registryTokenId": "1368",
+        "ownerAccount": "4Bbiw5dh6rKkPrTujo98E52kXxf1XEU2JupFfrsnnZ4xrgHYu4",
+        "agentCard": "https://raw.githubusercontent.com/Sathyagithub1/verified-deal-room/main/cards/buyer.json",
+        "cardSha256": "5aef7f909592a47c7c6c6ead837955cc0343d380200d8082d0b2bbf8f99e7ca9"
+      },
+      {
+        "role": "seller",
+        "badge": "JyP9VZqHrWzRg1f9swboB",
+        "registryTokenId": "1369",
+        "ownerAccount": "4PrHYANQoqNYtMAgnh8Jev6vhqaJ7Rjnmfe2SaTB91acFEKChZ",
+        "agentCard": "https://raw.githubusercontent.com/Sathyagithub1/verified-deal-room/main/cards/seller.json",
+        "cardSha256": "1c0e6a233ece65e1883990877433bb54beb72de81390652152c3c1de7b3fa807"
+      }
+    ]
+  },
+  "humanOversight": {
+    "budgetCapMicro": "10000000",
+    "maxModelCalls": 8,
+    "counterpartyRule": "deal only with agents whose Concordium badge verifies (active, card hash matches on-chain)"
+  },
+  "events": [
+    {
+      "seq": 0,
+      "timestamp": "2026-11-21T08:17:50.248Z",
+      "actor": "buyer",
+      "type": "badge_check",
+      "data": {
+        "counterparty": "JyP9VZqHrWzRg1f9swboB",
+        "allowed": true,
+        "reason": "verified: active agent, card hash matches on-chain, badge well-formed"
+      },
+      "prevHash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "hash": "47bac74a54fc51c2459c680031293bac1564c027ca84d93adb99ad78175fc6fe"
+    },
+    {
+      "seq": 1,
+      "timestamp": "2026-11-21T08:17:50.865Z",
+      "actor": "seller",
+      "type": "badge_check",
+      "data": {
+        "counterparty": "JyP9VYjovVVVqtRQyBhPf",
+        "allowed": true,
+        "reason": "verified: active agent, card hash matches on-chain, badge well-formed"
+      },
+      "prevHash": "47bac74a54fc51c2459c680031293bac1564c027ca84d93adb99ad78175fc6fe",
+      "hash": "a9a4f1232ba84a6daa07f40bf6c0aa04a11f08358a08557a32b037266b80eb73"
+    },
+    {
+      "seq": 2,
+      "timestamp": "2026-11-21T08:18:15.351Z",
+      "actor": "seller",
+      "type": "offer",
+      "data": {
+        "role": "seller",
+        "action": "offer",
+        "unit_price": "0.12",
+        "quantity": 100,
+        "lead_time_days": 14,
+        "message": "Thank you for your RFQ. We can supply 100 recycled kraft shipping boxes (30x20x15 cm) at 0.12 CCD per unit, delivered in 14 days. Expedited delivery in as few as 11 days is available at a small premium. Happy to discuss volume pricing for larger orders."
+      },
+      "prevHash": "a9a4f1232ba84a6daa07f40bf6c0aa04a11f08358a08557a32b037266b80eb73",
+      "hash": "728c18cab71c4c72af71e5ddc3ba9cf7c3cfe49829966a1edaf10668135063e1"
+    },
+    {
+      "seq": 3,
+      "timestamp": "2026-11-21T08:18:15.352Z",
+      "actor": "buyer",
+      "type": "offer",
+      "data": {
+        "role": "buyer",
+        "action": "offer",
+        "unit_price": "0.065",
+        "quantity": 100,
+        "lead_time_days": 14,
+        "message": "Thanks. 0.12 is above our approved range. We can do 0.065 CCD per unit for 100 units, 14-day delivery. Our hard cap on this order is 10 CCD total."
+      },
+      "prevHash": "728c18cab71c4c72af71e5ddc3ba9cf7c3cfe49829966a1edaf10668135063e1",
+      "hash": "2caf241ed9770803e57575132d81257ff0c5fb26110c6ef0b3be93de655f5b5e"
+    },
+    {
+      "seq": 4,
+      "timestamp": "2026-11-21T08:18:15.352Z",
+      "actor": "seller",
+      "type": "offer",
+      "data": {
+        "role": "seller",
+        "action": "offer",
+        "unit_price": "0.10",
+        "quantity": 100,
+        "lead_time_days": 14,
+        "message": "0.065 is below our cost. We can come down to 0.10 CCD per unit for 100 units at 14 days, which is 10 CCD total and fits your cap. Larger volumes would unlock better rates."
+      },
+      "prevHash": "2caf241ed9770803e57575132d81257ff0c5fb26110c6ef0b3be93de655f5b5e",
+      "hash": "19b9caf68a688fe9d55f26fe1bf7ecea41cdd2821db70d9bedad5ebfc8ce97e4"
+    },
+    {
+      "seq": 5,
+      "timestamp": "2026-11-21T08:18:15.352Z",
+      "actor": "buyer",
+      "type": "offer",
+      "data": {
+        "role": "buyer",
+        "action": "offer",
+        "unit_price": "0.075",
+        "quantity": 100,
+        "lead_time_days": 14,
+        "message": "10 CCD is our absolute ceiling, not our target. We can go to 0.075 CCD per unit for 100 units, 14 days. That's a firm improvement on our last. Otherwise we'll source elsewhere."
+      },
+      "prevHash": "19b9caf68a688fe9d55f26fe1bf7ecea41cdd2821db70d9bedad5ebfc8ce97e4",
+      "hash": "ff169edfd37da5c7da333ef09fd72aeddae8da4cee2b119825bcfe2ed2ffcae4"
+    },
+    {
+      "seq": 6,
+      "timestamp": "2026-11-21T08:18:15.352Z",
+      "actor": "seller",
+      "type": "offer",
+      "data": {
+        "role": "seller",
+        "action": "offer",
+        "unit_price": "0.088",
+        "quantity": 100,
+        "lead_time_days": 14,
+        "message": "We can meet you near the middle at 0.088 CCD per unit for 100 units, 14-day delivery — 8.80 CCD total, well under your ceiling. That's close to our floor on a quantity this small."
+      },
+      "prevHash": "ff169edfd37da5c7da333ef09fd72aeddae8da4cee2b119825bcfe2ed2ffcae4",
+      "hash": "a7bd976de18f417a219f95d79dfd31a30f31f55cb4b9c613b888542743d8fee5"
+    },
+    {
+      "seq": 7,
+      "timestamp": "2026-11-21T08:18:15.352Z",
+      "actor": "buyer",
+      "type": "offer",
+      "data": {
+        "role": "buyer",
+        "action": "offer",
+        "unit_price": "0.080",
+        "quantity": 100,
+        "lead_time_days": 14,
+        "message": "Final: 0.080 CCD per unit, 100 units, 14 days — 8.00 CCD total. We can confirm immediately at that price."
+      },
+      "prevHash": "a7bd976de18f417a219f95d79dfd31a30f31f55cb4b9c613b888542743d8fee5",
+      "hash": "24a50f04b3eefb729c47eaa9a32775c0400d285a5a952d6e4a362e04fab22ea0"
+    },
+    {
+      "seq": 8,
+      "timestamp": "2026-11-21T08:18:15.352Z",
+      "actor": "seller",
+      "type": "accept",
+      "data": {
+        "role": "seller",
+        "action": "accept",
+        "unit_price": "0.080",
+        "quantity": 100,
+        "lead_time_days": 14,
+        "message": "Agreed — 100 units at 0.080 CCD, 14-day delivery, 8.00 CCD total. We'll confirm the order today."
+      },
+      "prevHash": "24a50f04b3eefb729c47eaa9a32775c0400d285a5a952d6e4a362e04fab22ea0",
+      "hash": "d37e918bf8cbc507d6c913441ab2de26ee44a881379248c00556c2cc35a7e361"
+    },
+    {
+      "seq": 9,
+      "timestamp": "2026-11-21T08:18:21.481Z",
+      "actor": "buyer",
+      "type": "payment",
+      "data": {
+        "amountMicro": "8000000",
+        "tx": "30b55af306ef1f45fb08ce3dcc5e4b77a24606c929c6dece8eb5d8f33627cf23"
+      },
+      "prevHash": "d37e918bf8cbc507d6c913441ab2de26ee44a881379248c00556c2cc35a7e361",
+      "hash": "432d55886505c529efdf3bf0251c60e9ccc910ac1df9cb40f468fef56042fb42"
+    },
+    {
+      "seq": 10,
+      "timestamp": "2026-11-21T08:18:27.405Z",
+      "actor": "system",
+      "type": "anchor",
+      "data": {
+        "tx": "b3d2fcc83ed5d00294878ea79cee1a2d9778729005cd25c59aeff9856ae1baad",
+        "anchoredHead": "432d55886505c529efdf3bf0251c60e9ccc910ac1df9cb40f468fef56042fb42"
+      },
+      "prevHash": "432d55886505c529efdf3bf0251c60e9ccc910ac1df9cb40f468fef56042fb42",
+      "hash": "ef1ae17d2775ee517628f5b228a0739083256777d5c4c6ab67a5aae018a219a1"
+    }
+  ],
+  "integrity": {
+    "head": "ef1ae17d2775ee517628f5b228a0739083256777d5c4c6ab67a5aae018a219a1",
+    "chainVerified": true,
+    "anchor": {
+      "network": "testnet",
+      "tx": "b3d2fcc83ed5d00294878ea79cee1a2d9778729005cd25c59aeff9856ae1baad",
+      "explorerUrl": "https://ccdexplorer.io/testnet/transaction/b3d2fcc83ed5d00294878ea79cee1a2d9778729005cd25c59aeff9856ae1baad"
+    }
+  }
+}
