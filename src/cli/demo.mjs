@@ -105,7 +105,7 @@ if (scene2.outcome === "deal") {
   say(`  after editing the payment amount: chain ok=${broken.ok} (broken at entry ${broken.brokenAt})`);
 }
 
-const run = { mode: replay ? "SCRIPTED replay" : "Claude", at: new Date().toISOString(), scenario, scenes: { rogue: scene1, deal: scene2, tamper: scene3 }, registry: { buyer: registry.agents.buyer, seller: registry.agents.seller } };
+const run = { mode: replay ? "SCRIPTED replay" : "Claude", agents: { model: decider.model ?? "Claude", usage: decider.usage }, at: new Date().toISOString(), scenario, scenes: { rogue: scene1, deal: scene2, tamper: scene3 }, registry: { buyer: registry.agents.buyer, seller: registry.agents.seller } };
 mkdirSync("runs", { recursive: true });
 const file = `runs/demo-${run.at.replace(/[:.]/g, "-")}.json`;
 writeFileSync(file, `${JSON.stringify(run, (k, v) => (typeof v === "bigint" ? v.toString() : v), 2)}\n`);
