@@ -65,7 +65,9 @@ async function phaseRegister(state, c) {
       if (!s.tokenId) throw new Error(`${role}: registered (${tx.hash}) but the indexer has not listed the agent yet; rerun "register"`);
     }
     const badged = await tools.buildBadge({ card_url: s.agentUri, owner_account: s.owner, token_id: s.tokenId });
-    writeCard(role, badged.agent_card_json ?? badged.card_json);
+    const cardJson = badged.agent_card_json ?? badged.card_json;
+    writeCard(role, cardJson);
+    s.tokenAddress = cardJson.match(/"tokenAddress":\s*"ccd:[0-9a-f]+\/cis-2:([1-9A-HJ-NP-Za-km-z]+)"/)?.[1] ?? null;
     s.badgedHash = badged.metadata_hash_hex ?? badged.sha256;
     say(`${role}: token ${s.tokenId}, badged card written (sha256 ${s.badgedHash})`);
     save(state);
