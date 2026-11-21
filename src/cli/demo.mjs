@@ -22,7 +22,8 @@ const say = (msg) => process.stdout.write(`${msg}\n`);
 const scenario = JSON.parse(readFileSync("scenario.json", "utf8"));
 const registry = JSON.parse(readFileSync("runs/registry.json", "utf8"));
 const capMicro = toMicro(scenario.capCcd);
-const ROGUE_BADGE = "JyP9VZZZZZZZZZZZZZZZZ";
+// Well-formed badge on the real registry contract <12802,0> for token 999999, which was never minted.
+const ROGUE_BADGE = "JyP9V5dupAgxNyUmSS4CG";
 
 async function makeDecider() {
   if (replay) return scriptedDecider(JSON.parse(readFileSync("test/fixtures/negotiation.json", "utf8")));

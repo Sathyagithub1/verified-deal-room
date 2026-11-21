@@ -87,7 +87,7 @@ export function callTool(name, args, { timeoutMs = 20_000 } = {}) {
 /** Badge verdict: MCP first (as the hackathon brief suggests), REST only if the MCP transport fails. */
 export async function fetchBadgeVerdict(badge, { mcp = callTool, rest = restCheckBadge } = {}) {
   try {
-    return { via: "mcp", verdict: await mcp("check_badge", { id: badge }) };
+    return { via: "mcp", verdict: await mcp("check_badge", { id: badge, network: "testnet" }) };
   } catch (err) {
     return { via: "rest", verdict: await rest(badge), mcpError: err.message };
   }

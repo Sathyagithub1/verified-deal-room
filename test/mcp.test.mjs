@@ -50,3 +50,10 @@ test("badge verdict uses MCP first and falls back to REST only on transport fail
   const fb = await fetchBadgeVerdict("B", { mcp: async () => { throw new Error("socket hang up"); }, rest: async () => ({ v: "rest" }) });
   assert.deepEqual([fb.via, fb.verdict.v, fb.mcpError], ["rest", "rest", "socket hang up"]);
 });
+
+test("fetchBadgeVerdict pins the testnet network on the MCP call", async () => {
+  const { fetchBadgeVerdict } = await import("../src/concordium/mcp.mjs");
+  let seen;
+  await fetchBadgeVerdict("B", { mcp: async (name, args) => { seen = { name, args }; return {}; }, rest: async () => ({}) });
+  assert.deepEqual(seen, { name: "check_badge", args: { id: "B", network: "testnet" } });
+});
