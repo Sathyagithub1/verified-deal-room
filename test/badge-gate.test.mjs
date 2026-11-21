@@ -43,3 +43,9 @@ test("account-level response (many agents) is not accepted as one badge", () => 
 test("missing / garbage verdicts fail closed", () => {
   for (const v of [null, undefined, {}, "ok", { badge_valid: true }]) assert.equal(decide(v).allowed, false);
 });
+
+test("a plain-text registry error is refused and quoted in the reason", () => {
+  const r = decide("config error: `JyP9VZZZZZZZZZZZZZZZZ` is neither a CIS-8004 badge token address nor a Concordium account address");
+  assert.equal(r.allowed, false);
+  assert.match(r.reason, /^badge not recognised by the registry: config error/);
+});

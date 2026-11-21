@@ -1,0 +1,341 @@
+{
+  "mode": "SCRIPTED replay",
+  "at": "2026-11-21T03:37:55.645Z",
+  "scenario": {
+    "product": "Recycled kraft shipping boxes, 30x20x15 cm",
+    "quantity": 100,
+    "currency": "CCD",
+    "capCcd": "10",
+    "buyer": {
+      "targetUnitPrice": "0.07",
+      "maxLeadTimeDays": 14
+    },
+    "seller": {
+      "listUnitPrice": "0.12",
+      "floorUnitPrice": "0.08",
+      "leadTimeDays": 14
+    }
+  },
+  "scenes": {
+    "rogue": {
+      "outcome": "refused",
+      "reason": "badge not recognised by the registry: config error: `JyP9VZZZZZZZZZZZZZZZZ` is neither a CIS-8004 badge token address nor a Concordium account address",
+      "log": {
+        "format": "ayon.decision-log/v1",
+        "head": "2cd645a3ac06c1cd02f1bd1885c039a1e14471d5676cee9cf69e8fc8ec363c0d",
+        "anchor": {
+          "network": "testnet",
+          "tx": null
+        },
+        "entries": [
+          {
+            "seq": 0,
+            "ts": "2026-11-21T03:37:41.054Z",
+            "actor": "buyer",
+            "type": "badge_check",
+            "data": {
+              "counterparty": "JyP9VZZZZZZZZZZZZZZZZ",
+              "allowed": false,
+              "reason": "badge not recognised by the registry: config error: `JyP9VZZZZZZZZZZZZZZZZ` is neither a CIS-8004 badge token address nor a Concordium account address"
+            },
+            "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+            "hash": "2cd645a3ac06c1cd02f1bd1885c039a1e14471d5676cee9cf69e8fc8ec363c0d"
+          }
+        ]
+      }
+    },
+    "deal": {
+      "outcome": "deal",
+      "reason": "settled",
+      "log": {
+        "format": "ayon.decision-log/v1",
+        "head": "fa69782ecb0d56ec9e21cedc4a7877cdb54bd1603e7ea599a23b3b3f7423aba5",
+        "anchor": {
+          "network": "testnet",
+          "tx": "9848be24d53a4ab2c4c5bde64ac96f0031f9f86f8c0073a6f45f691cd0853766"
+        },
+        "entries": [
+          {
+            "seq": 0,
+            "ts": "2026-11-21T03:37:41.809Z",
+            "actor": "buyer",
+            "type": "badge_check",
+            "data": {
+              "counterparty": "JyP9VZqHrWzRg1f9swboB",
+              "allowed": true,
+              "reason": "verified: active agent, card hash matches on-chain, badge well-formed"
+            },
+            "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+            "hash": "35df2e50a90b31d54ff53bc91ab3d0799fcc4ae0aa10075eae96c491ec6eac36"
+          },
+          {
+            "seq": 1,
+            "ts": "2026-11-21T03:37:42.358Z",
+            "actor": "seller",
+            "type": "badge_check",
+            "data": {
+              "counterparty": "JyP9VYjovVVVqtRQyBhPf",
+              "allowed": true,
+              "reason": "verified: active agent, card hash matches on-chain, badge well-formed"
+            },
+            "prev": "35df2e50a90b31d54ff53bc91ab3d0799fcc4ae0aa10075eae96c491ec6eac36",
+            "hash": "61c3d615698a08bf6dd00b2e82f6da9a805ab524ffdfb7f277ae0e86029f7d24"
+          },
+          {
+            "seq": 2,
+            "ts": "2026-11-21T03:37:42.363Z",
+            "actor": "seller",
+            "type": "offer",
+            "data": {
+              "role": "seller",
+              "action": "offer",
+              "unit_price": "0.12",
+              "quantity": 100,
+              "lead_time_days": 14,
+              "message": "List price 0.12 CCD per unit, 14 days."
+            },
+            "prev": "61c3d615698a08bf6dd00b2e82f6da9a805ab524ffdfb7f277ae0e86029f7d24",
+            "hash": "0bb4ba62851e39cd60524d881d8a58e713dce6f860ba67e7ee4d7c389bf2b3da"
+          },
+          {
+            "seq": 3,
+            "ts": "2026-11-21T03:37:42.363Z",
+            "actor": "buyer",
+            "type": "offer",
+            "data": {
+              "role": "buyer",
+              "action": "offer",
+              "unit_price": "0.07",
+              "quantity": 100,
+              "lead_time_days": 10,
+              "message": "We can do 0.07 if you ship in 10 days."
+            },
+            "prev": "0bb4ba62851e39cd60524d881d8a58e713dce6f860ba67e7ee4d7c389bf2b3da",
+            "hash": "3d8ee32f4b54b697060e13398ca1808b4a1c0452f4e898cfe24f2cf10d415cc4"
+          },
+          {
+            "seq": 4,
+            "ts": "2026-11-21T03:37:42.363Z",
+            "actor": "seller",
+            "type": "offer",
+            "data": {
+              "role": "seller",
+              "action": "offer",
+              "unit_price": "0.09",
+              "quantity": 100,
+              "lead_time_days": 12,
+              "message": "0.09 at 12 days is our best."
+            },
+            "prev": "3d8ee32f4b54b697060e13398ca1808b4a1c0452f4e898cfe24f2cf10d415cc4",
+            "hash": "3a162f079f0a24bbdce77ee08a4ff36fceb7f0351698b0f7db383711761f4638"
+          },
+          {
+            "seq": 5,
+            "ts": "2026-11-21T03:37:42.363Z",
+            "actor": "buyer",
+            "type": "accept",
+            "data": {
+              "role": "buyer",
+              "action": "accept",
+              "unit_price": "0.09",
+              "quantity": 100,
+              "lead_time_days": 12,
+              "message": "Agreed."
+            },
+            "prev": "3a162f079f0a24bbdce77ee08a4ff36fceb7f0351698b0f7db383711761f4638",
+            "hash": "16751cb6f95e3de170343fe2ad5abdd0296ff56badc33d7707fb4623184bd7c4"
+          },
+          {
+            "seq": 6,
+            "ts": "2026-11-21T03:37:49.650Z",
+            "actor": "buyer",
+            "type": "payment",
+            "data": {
+              "amountMicro": "9000000",
+              "tx": "852415616f2b16e81437d696d46cfa03a05b1cb48fd4227fb9402caac4dad5e6"
+            },
+            "prev": "16751cb6f95e3de170343fe2ad5abdd0296ff56badc33d7707fb4623184bd7c4",
+            "hash": "c43a4d17ce3c8e54f2659231bc01db6941cc23a81ac3c273970b4bb3ee0a49d1"
+          },
+          {
+            "seq": 7,
+            "ts": "2026-11-21T03:37:55.503Z",
+            "actor": "system",
+            "type": "anchor",
+            "data": {
+              "tx": "9848be24d53a4ab2c4c5bde64ac96f0031f9f86f8c0073a6f45f691cd0853766",
+              "anchoredHead": "c43a4d17ce3c8e54f2659231bc01db6941cc23a81ac3c273970b4bb3ee0a49d1"
+            },
+            "prev": "c43a4d17ce3c8e54f2659231bc01db6941cc23a81ac3c273970b4bb3ee0a49d1",
+            "hash": "fa69782ecb0d56ec9e21cedc4a7877cdb54bd1603e7ea599a23b3b3f7423aba5"
+          }
+        ]
+      },
+      "terms": {
+        "unit_price": "0.09",
+        "quantity": 100,
+        "lead_time_days": 12
+      },
+      "payment": {
+        "txHash": "852415616f2b16e81437d696d46cfa03a05b1cb48fd4227fb9402caac4dad5e6",
+        "amount": "9000000"
+      },
+      "anchor": {
+        "hash": "9848be24d53a4ab2c4c5bde64ac96f0031f9f86f8c0073a6f45f691cd0853766",
+        "explorerUrl": "https://ccdexplorer.io/testnet/transaction/9848be24d53a4ab2c4c5bde64ac96f0031f9f86f8c0073a6f45f691cd0853766"
+      }
+    },
+    "tamper": {
+      "intactChain": {
+        "ok": true,
+        "head": "c43a4d17ce3c8e54f2659231bc01db6941cc23a81ac3c273970b4bb3ee0a49d1"
+      },
+      "onChainMatchesLog": true,
+      "tamperedChain": {
+        "ok": false,
+        "brokenAt": 6
+      },
+      "editedEntry": 6
+    }
+  },
+  "registry": {
+    "buyer": {
+      "owner": "4Bbiw5dh6rKkPrTujo98E52kXxf1XEU2JupFfrsnnZ4xrgHYu4",
+      "agentUri": "https://raw.githubusercontent.com/Sathyagithub1/verified-deal-room/main/cards/buyer.json",
+      "preMintHash": "aba6867546978da901052bb25059e5d7eccb8d461c15acb16228790ee2b5df3a",
+      "tokenId": "1368",
+      "registerTx": {
+        "hash": "a47251e4e06d8be9e807f9bf48b2bd90b45886be95a30cd4ca6f45ca4c1476a2",
+        "explorerUrl": "https://ccdexplorer.io/testnet/transaction/a47251e4e06d8be9e807f9bf48b2bd90b45886be95a30cd4ca6f45ca4c1476a2"
+      },
+      "badgedHash": "5aef7f909592a47c7c6c6ead837955cc0343d380200d8082d0b2bbf8f99e7ca9",
+      "tokenAddress": "JyP9VYjovVVVqtRQyBhPf",
+      "pinTx": {
+        "hash": "bd9bc1de23dc7994decf75404b9e47d10fdd7bd4314c89c1b3674b314eea5f1b",
+        "explorerUrl": "https://ccdexplorer.io/testnet/transaction/bd9bc1de23dc7994decf75404b9e47d10fdd7bd4314c89c1b3674b314eea5f1b"
+      },
+      "lastCheck": {
+        "token_id": 1368,
+        "token_address": "JyP9VYjovVVVqtRQyBhPf",
+        "agent_uri": "https://raw.githubusercontent.com/Sathyagithub1/verified-deal-room/main/cards/buyer.json",
+        "http_status": 200,
+        "card_sha256": "5aef7f909592a47c7c6c6ead837955cc0343d380200d8082d0b2bbf8f99e7ca9",
+        "on_chain": {
+          "owner_account": "4Bbiw5dh6rKkPrTujo98E52kXxf1XEU2JupFfrsnnZ4xrgHYu4",
+          "status": "Active",
+          "agent_uri": "https://raw.githubusercontent.com/Sathyagithub1/verified-deal-room/main/cards/buyer.json",
+          "metadata_hash_hex": "5aef7f909592a47c7c6c6ead837955cc0343d380200d8082d0b2bbf8f99e7ca9"
+        },
+        "checks": {
+          "on_chain_agent_found": true,
+          "status_active": true,
+          "has_agent_uri": true,
+          "card_fetched": true,
+          "hash_matches_on_chain": true,
+          "badge_present": true,
+          "badge_embedding": "extension",
+          "badge_well_formed": true,
+          "token_address_matches": true,
+          "owner_matches": true,
+          "contracts_match": true,
+          "verify_present": true,
+          "extension_conformant": true,
+          "verification_present": true,
+          "verify_url_matches": true
+        },
+        "badge_valid": true,
+        "issues": [],
+        "network": "testnet",
+        "expected": {
+          "chain": "ccd:4221332d34e1694168c2a0c0b3fd0f27",
+          "contracts": {
+            "cis8004": "12802,0",
+            "cis8": "12801,0"
+          }
+        }
+      }
+    },
+    "seller": {
+      "owner": "4PrHYANQoqNYtMAgnh8Jev6vhqaJ7Rjnmfe2SaTB91acFEKChZ",
+      "agentUri": "https://raw.githubusercontent.com/Sathyagithub1/verified-deal-room/main/cards/seller.json",
+      "preMintHash": "09f23dc5b0df27120bde605d0c4a1fc2c09011b6b7efcb6d9271e91a074a2d36",
+      "tokenId": "1369",
+      "registerTx": {
+        "hash": "9a908985e71bcd0219f1b72c91cba2138ecb47e05388ace6487c228f74ba6568",
+        "explorerUrl": "https://ccdexplorer.io/testnet/transaction/9a908985e71bcd0219f1b72c91cba2138ecb47e05388ace6487c228f74ba6568"
+      },
+      "badgedHash": "1c0e6a233ece65e1883990877433bb54beb72de81390652152c3c1de7b3fa807",
+      "tokenAddress": "JyP9VZqHrWzRg1f9swboB",
+      "pinTx": {
+        "hash": "d6d2dfd4141d41950b924ee98454ef8f44c075fa495e03d412600aa0cfdb42c6",
+        "explorerUrl": "https://ccdexplorer.io/testnet/transaction/d6d2dfd4141d41950b924ee98454ef8f44c075fa495e03d412600aa0cfdb42c6"
+      },
+      "lastCheck": {
+        "token_id": 1369,
+        "token_address": "JyP9VZqHrWzRg1f9swboB",
+        "agent_uri": "https://raw.githubusercontent.com/Sathyagithub1/verified-deal-room/main/cards/seller.json",
+        "http_status": 200,
+        "card_sha256": "09f23dc5b0df27120bde605d0c4a1fc2c09011b6b7efcb6d9271e91a074a2d36",
+        "on_chain": {
+          "owner_account": "4PrHYANQoqNYtMAgnh8Jev6vhqaJ7Rjnmfe2SaTB91acFEKChZ",
+          "status": "Active",
+          "agent_uri": "https://raw.githubusercontent.com/Sathyagithub1/verified-deal-room/main/cards/seller.json",
+          "metadata_hash_hex": "1c0e6a233ece65e1883990877433bb54beb72de81390652152c3c1de7b3fa807"
+        },
+        "checks": {
+          "on_chain_agent_found": true,
+          "status_active": true,
+          "has_agent_uri": true,
+          "card_fetched": true,
+          "hash_matches_on_chain": false,
+          "badge_present": true,
+          "badge_embedding": "extension",
+          "badge_well_formed": false,
+          "token_address_matches": false,
+          "owner_matches": true,
+          "contracts_match": true,
+          "verify_present": true,
+          "extension_conformant": true,
+          "verification_present": true,
+          "verify_url_matches": true
+        },
+        "badge_valid": false,
+        "issues": [
+          {
+            "severity": "error",
+            "field": "metadata_hash",
+            "message": "card SHA-256 does not match the on-chain metadata_hash",
+            "expected": "1c0e6a233ece65e1883990877433bb54beb72de81390652152c3c1de7b3fa807",
+            "actual": "09f23dc5b0df27120bde605d0c4a1fc2c09011b6b7efcb6d9271e91a074a2d36"
+          },
+          {
+            "severity": "error",
+            "field": "tokenAddress",
+            "message": "badge is missing required field `tokenAddress`",
+            "expected": "present"
+          },
+          {
+            "severity": "error",
+            "field": "tokenAddress",
+            "message": "badge short form does not match the on-chain token address",
+            "expected": "JyP9VZqHrWzRg1f9swboB"
+          },
+          {
+            "severity": "error",
+            "field": "tokenAddress",
+            "message": "CAIP-19 token address does not match",
+            "expected": "ccd:4221332d34e1694168c2a0c0b3fd0f27/cis-2:JyP9VZqHrWzRg1f9swboB"
+          }
+        ],
+        "network": "testnet",
+        "expected": {
+          "chain": "ccd:4221332d34e1694168c2a0c0b3fd0f27",
+          "contracts": {
+            "cis8004": "12802,0",
+            "cis8": "12801,0"
+          }
+        }
+      }
+    }
+  }
+}

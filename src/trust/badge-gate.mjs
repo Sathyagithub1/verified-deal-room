@@ -13,6 +13,7 @@ const REQUIRED_CHECKS = [
 const refuse = (reason) => ({ allowed: false, reason, warnings: [] });
 
 export function decide(verdict) {
+  if (typeof verdict === "string" && verdict.trim()) return refuse(`badge not recognised by the registry: ${verdict.trim().slice(0, 200)}`);
   if (!verdict || typeof verdict !== "object") return refuse("no badge verdict");
   if (verdict.error) return refuse(`badge not recognised (${verdict.error})`);
   if (Array.isArray(verdict.agents)) return refuse("account-level verdict; a single badge is required");
