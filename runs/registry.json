@@ -1,0 +1,14 @@
+{
+  "agents": {
+    "buyer": {
+      "owner": "4Bbiw5dh6rKkPrTujo98E52kXxf1XEU2JupFfrsnnZ4xrgHYu4",
+      "agentUri": "https://raw.githubusercontent.com/Sathyagithub1/verified-deal-room/main/cards/buyer.json",
+      "preMintHash": "aba6867546978da901052bb25059e5d7eccb8d461c15acb16228790ee2b5df3a"
+    },
+    "seller": {
+      "owner": "4PrHYANQoqNYtMAgnh8Jev6vhqaJ7Rjnmfe2SaTB91acFEKChZ",
+      "agentUri": "https://raw.githubusercontent.com/Sathyagithub1/verified-deal-room/main/cards/seller.json",
+      "preMintHash": "09f23dc5b0df27120bde605d0c4a1fc2c09011b6b7efcb6d9271e91a074a2d36"
+    }
+  }
+}
