@@ -6,6 +6,7 @@ Drafted for the owner to paste into the Encode project page. Nothing here has be
 - **Project:** Verified Deal Room by Ayon AI.
 - **Challenge:** Make your Agents Accountable with Concordium.
 - **Repo:** https://github.com/Sathyagithub1/verified-deal-room
+- **Demo video (2:48):** https://youtu.be/d07hw-Sb8pk
 
 ## Short description (one line)
 
